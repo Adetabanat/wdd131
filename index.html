@@ -4,38 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Adongo">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Daniel Adongo. My WDD 131 landing page.">
-    <link rel="styleshet" href="styles/base.css">
-    <title> WDD 131 - Dynamic Web Fundamentals- Daniel Adongo</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <title>WDD 131: Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <h1> WDD 131 - Dynamic Web Fundamentals</h1>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span>Daniel Adongo</span></h1>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/daniel-adetaba-adongo-9901292a0/ " target="_blank">LinkedIn profile</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng" target="_blank">Favorite scriptures</a></li>
-                <li><a href="1" target="_blank"></a>Final Project <link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom"></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Canvas</a></li>
+                <li><a href="#">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
-        </nav>    
+        </nav>
     </header>
     <main>
-        <section class="card">
-            <h2>About me</h2>
-            <img src="images/nat.jpg" alt="nat">
-            <p>Content 1 section</p>
+        <section class="content">
+            <div class="card about-me">
+                <h2>About Me</h2>
+                <div class="flex-container">
+                    <p>
+                        My name is Daniel Adetaba Adongo, from Ghana. I’m currently studying Software Development at Brigham Young University-Idaho (BYUI), 
+                        where I am passionate about gaining the skills and knowledge necessary to excel in the tech industry.
+                        I’m happily married and have one wonderful child, and I am constantly striving to balance my academic pursuits with my family life. 
+                        My journey in software development is not just about personal growth, but also about making a meaningful impact through technology. 
+                        I look forward to connecting with others in the field and contributing to exciting projects in the future.  
+                    <img src="images/nat.jpg" alt="Daniel Adongo">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Ghana</h2>
+                <div class="flex-container">
+                    <img src="images/coat_of_arm.png" alt="Coat of Arms">
+                    <div>
+                        <p>
+                            Ghana, officially known as the Republic of Ghana, is a West African country situated along the Gulf of Guinea and the Atlantic Ocean to the south.
+                            It shares borders with Ivory Coast to the west, Burkina Faso to the north, and Togo to the east. Covering an area of 239,567 square kilometers (92,497 square miles),
+                            Ghana features a variety of ecosystems, ranging from coastal savannas to tropical rainforests. With a population of nearly 35 million, it is the second-most populous nation in West Africa.
+                            Accra serves as the capital and largest city, while other major urban centers include Kumasi, Tamale, and Sekondi-Takoradi.
+                        <p class="image-caption">Ghana's Coat Of Arms</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="card">
-            <h2>section 2 Heading</h2>
-            <img src="images/coat_of_arm.png" alt="Ghana coat of Arms">
-            <p>Content 2 section</p>
-        </section>
+
+        <aside class="resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="#">Dev.to Community</a></li>
+                <li><a href="#">Smashing Magazine</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">W3 Schools</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Image Placeholder</a></li>
+            </ul>
+        </aside>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Daniel Adongo. Ghana.</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="year">2025</span> Daniel Adongo • Ghana</p>
+        <p>Last Modification: 01/09/2025 12:13:33</p>
     </footer>
 </body>
 </html>
-
