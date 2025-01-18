@@ -1,79 +1,94 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Choose your typography */
-    background-color: #f4f4f4; /* Background color */
-    color: #333; /* Text color */
+body, h1, p, ul, li, figure, figcaption {
     margin: 0;
     padding: 0;
-  }
-  
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
   header {
-    background-color: #333; /* Dark background for header */
+    background-color: #333; 
     color: #fff;
     padding: 1rem;
     text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
+    gap: 20px;
+    justify-content: space-evenly;
   }
-  
-  nav li {
-    margin: 0 15px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    display: block;
-  }
-  
-  nav a:hover {
-    color: #f39c12; /* Change color on hover */
-    text-decoration: underline;
-  }
-  
-  main {
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-  
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
   h2 {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 20px;
   }
-  
-  /* CSS Grid for figure layout */
   main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .figure {
     display: grid;
-    grid-template-columns: 1fr; /* One column on mobile */
+    grid-template-columns: 1fr; 
     gap: 20px;
   }
+  main .figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
   
-  figure {
-    margin: 0;
-    text-align: center;
-  }
-  
-  figcaption {
-    font-size: 1rem;
-    font-weight: bold;
+main .figure figcaption {
     margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+  nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: none; 
+    padding: 10px; 
   }
-  
-  /* Footer Styles */
+  nav ul.show {
+    display: flex; 
+}
+  nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: #2c3e50;
+    color: #ecdbba;
+    border-radius: 5px
+  }
+
+  #hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex; 
+    flex-direction: column; /
+  }
+ 
   footer {
     background-color: #333;
     color: #fff;
@@ -81,43 +96,19 @@ body {
     padding: 1rem;
     margin-top: 20px;
   }
+
   
   footer a {
     color: #fff;
     text-decoration: none;
   }
-  
-  /* Hide the navigation menu on mobile */
-  nav ul {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul.active {
-    display: flex; /* Show the menu when it's active */
-    flex-direction: column; /* Stack the menu items vertically */
-  }
-  
-  #hamburger {
-    font-size: 2rem;
-    display: block;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  @media (min-width: 768px) {
-    /* Show the navigation items normally on larger screens */
-    nav ul {
-      position: static;
-      display: none;
-    }
-  
+  @media (max-width: 768px) {
     #hamburger {
-      display: block; /* Hide hamburger on larger screens */
+        display: block; /* Show hamburger button for smaller screens */
     }
-  }
-  
+
+    nav ul {
+        position: static;
+        display: none; /* Hidden by default */
+    }
+}
