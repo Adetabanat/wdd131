@@ -107,11 +107,11 @@ main .figure figcaption {
   }
   @media (max-width: 768px) {
     #hamburger {
-        display: block; /* Show hamburger button for smaller screens */
+        display: block; 
     }
 
     nav ul {
         position: static;
-        display: none; /* Hidden by default */
+        display: none; 
     }
 }
