@@ -86,7 +86,7 @@ main .figure figcaption {
 
   nav ul.active {
     display: flex; 
-    flex-direction: column; /
+    flex-direction: column; 
   }
  
   footer {
