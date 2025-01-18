@@ -1,0 +1,62 @@
+/* Override the mobile styles for larger screens */
+@media (min-width: 768px) {
+    /* Header */
+    header {
+      padding: 2rem;
+    }
+}
+  .head{
+    display: flex;
+    justify-content: space-evenly;
+   
+  }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+  
+    /* Navigation */
+    nav ul {
+      justify-content: space-evenly;
+    }
+    nav ul li a {
+        color: #eee;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+        font-size: x-large;
+ 
+    }
+    nav li {
+      margin: 0 25px;
+    }
+    nav ul li a:hover {
+        background: #fdd835;
+        color: #333;
+    /* Main content layout */
+    main {
+      max-width: 800px; 
+      margin: 20px auto;
+    }
+   
+    .figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    /* Adjust font size for figure captions */
+    figcaption {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Further adjustments for extra large screens */
+  @media (min-width: 1200px) {
+    .figure{
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on extra large screens */
+      gap: 5px;
+      margin: 20px;
+      display: grid;
+    }
+  }
+  

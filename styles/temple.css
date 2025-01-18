@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Choose your typography */
+    background-color: #f4f4f4; /* Background color */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333; /* Dark background for header */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+  }
+  
+  nav a:hover {
+    color: #f39c12; /* Change color on hover */
+    text-decoration: underline;
+  }
+  
+  main {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* CSS Grid for figure layout */
+  main {
+    display: grid;
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 20px;
+  }
+  
+  figure {
+    margin: 0;
+    text-align: center;
+  }
+  
+  figcaption {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Hide the navigation menu on mobile */
+  nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul.active {
+    display: flex; /* Show the menu when it's active */
+    flex-direction: column; /* Stack the menu items vertically */
+  }
+  
+  #hamburger {
+    font-size: 2rem;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    /* Show the navigation items normally on larger screens */
+    nav ul {
+      position: static;
+      display: none;
+    }
+  
+    #hamburger {
+      display: block; /* Hide hamburger on larger screens */
+    }
+  }
+  
