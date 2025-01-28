@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <!-- Reference to JS file with defer attribute -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section with Hero Image -->
+    <header>
+        <h1>Madagascar</h1>
+        <picture>
+            <!-- Hero image using srcset and media queries for responsive design -->
+            <source srcset="images/hero3" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="images/hero2" type="image/webp" media="(min-width: 768px)">
+            <img src="images/hero1.webp" alt="A scenic view of Madagascar with wildlife" class="hero-image">
+        </picture>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero2.webp" alt="Cocoa from Ghana" class="hero-image">
+            </div>
+
+            <!-- Data Section -->
+            <section class="data-section">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 122,499 sq km</li>
+                    <li><strong>Population:</strong> 200,000 (Cape Coast City)</li>
+                    <li><strong>Capital:</strong> Cape Coast</li>
+                    <li><strong>Languages:</strong> English, Akan</li>
+                    <li><strong>Currency:</strong> Ghanaian Cedi (GHS)</li>
+                    <li><strong>Time Zone:</strong> UTC+0</li>
+                    <li><strong>Calling Code:</strong> +233</li>
+                    <li><strong>Internet TLD:</strong> .gh</li>
+                </ul>
+            </section>
+
+            <!-- Weather Section -->
+            <section id="weather">
+                <h2>Weather ⛅</h2>
+                <p><strong>Temperature:</strong> <span id="temperature">Loading...</span>°F</p>
+                <p><strong>Condition:</strong> <span id="condition">Loading...</span></p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed">Loading...</span> mph</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill">Loading...</span>°F</p>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section with Dynamic Year and Last Modified Date -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🌸 Rubia Magdalena Francesco 🌸 Madagascar</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
