@@ -1,147 +1,162 @@
-/* Global CSS Variables */
+
 :root {
-    --primary-red: #E30B17; /* Madagascar flag red */
-    --primary-green: #007A3D; /* Madagascar flag green */
-    --white: #ffffff; /* White */
-    --black: #333333; /* Text color */
-    --font-family: 'Arial', sans-serif;
-    --max-width: 1200px; /* Maximum content width */
-    --spacing-unit: 1rem; /* Spacing unit for margin/padding */
+
+    /* change the values below to your colors from your palette */
+    /* CSS HEX */
+    /* CSS HEX */
+    --seasalt: #f8f9faff;
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray: #ced4daff;
+    --french-gray-2: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --outer-space: #495057ff;
+    --onyx: #343a40ff;
+    --eerie-black: #212529ff;
+
+    /* Palette Color image*/
+
+    /* CSS HEX */
+    --fire-brick: #AE1820ff;
+    --rust: #AE3E22ff;
+    --fire-engine-red: #C3201Fff;
+    --chamoisee: #A16F4Eff;
+    --chocolate-cosmos: #67171Fff;
+
+    /* CSS HEX */
+    --alice-blue: #DCE9F7ff;
+    --powder-blue: #B6C9DFff;
+    --dim-gray: #5C6069ff;
+    --gunmetal: #1F2E3Bff;
+    --french-gray: #B7B0BEff;
+
+
+
+    /* change the values below to your chosen font(s) */
+    --poppins-regular: "Poppins", sans-serif;
+    --poppins-regular-weight: 400;
+    --poppins-thin: "Poppins", sans-serif;
+    --poppins-thin-weight: 100;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--primary-color-Rich-black);
+    /* headlines on a white background */
+    --headline-color-on-color: var(--accent3-color-Platinum);
+    /* headlines on a colored background */
+    --paragraph-color-on-white: var(--primary-color-Rich-black);
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: var(--accent3-color);
+    /* paragraph text on a colored background */
+    --paragraph-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-link-color: var(--accent3-color-Platinum);
+    --nav-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
+    --nav-hover-background-color: var(--primary-color-Rich-black);
 }
 
-/* Reset margins and padding for all elements */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f5f5f5;
-  }
-  
-  .hero-image {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-  }
 
-.data-section, #weather{
-    background: var(--white);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    text-align: left;
-    
-}
-.data-section ul {
-    list-style: none;
-}
-/* Body Styles */
 body {
-    font-family: var(--font-family);
-    background-color: var(--white);
-    color: var(--black);
-    line-height: 1.6;
-    padding: var(--spacing-unit);
-}
-
-/* Header Styles */
-header {
-    background-color: var(--primary-green);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem;
+    font-family: var(--poppins-regular);
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
-/* Hero Image */
-picture img {
+h2 {
+    font-size: 1.5rem;
+    padding-bottom: 20px
+}
+
+h2,
+h1 {
+    margin: 0%;
+}
+
+table {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.weather table {
+    padding: 25px 0;
+}
+
+td {
+    padding: 5px 5px;
+}
+
+td.label {
+    text-align: right;
+}
+
+.container {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 2fr auto auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-section {
+    grid-row: 1;
+    background-color: var(--gunmetal);
+    padding-top: 20px;
+}
+
+.hero img {
     width: 100%;
     height: auto;
-    border-top: 5px solid var(--primary-red);
+    mask-image: linear-gradient(#67171Fff 95%,
+    transparent);
+}
+
+.data,
+.weather {
+    padding-top: 25px;
+}
+
+.data {
+    grid-row: 2;
+
+}
+
+.weather-icon {
+    display: none;
+}
+
+.weather {
+    grid-row: 3;
+    margin-bottom: 50px;
 }
 
 
-
-#weather h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.weather img {
+    width: 15%;
+    height: auto;
 }
 
-#weather p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-#weather span {
-    font-weight: bold;
-    color: var(--primary-green);
-}
-
-/* Pseudo-element for Weather Icon */
-#weather::after {
-    content: "⛅"; /* Use emoticon or equivalent for weather icon */
-    font-size: 1.5rem;
-    margin-left: 10px;
-}
-
-/* Footer Styles */
+header,
 footer {
-    background-color: var(--primary-red);
-    color: var(--white);
+    background-color: var(--onyx);
+    color: var(--platinum);
+}
+
+footer {
+    padding: 25px 0;
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer span {
-    font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    #windchill {
-        font-size: 1.2rem;
-    }
-
-    #weather {
-        padding: 1.5rem;
-    }
-
-    footer {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 1.5rem;
-    }
-
-    #weather {
-        padding: 1rem;
-    }
-
-    footer {
-        padding: 0.8rem;
-    }
+    font-size: 1rem;
 }

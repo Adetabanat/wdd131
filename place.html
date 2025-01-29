@@ -4,63 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madagascar</title>
-    <!-- Link to CSS -->
+    <meta name="author" content="Daniel Adongo">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <title>WDD 131 - Dynamic Web Fundamentals - Daniel Adongo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
-    <!-- Reference to JS file with defer attribute -->
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Section with Hero Image -->
     <header>
-        <h1>Madagascar</h1>
-        <picture>
-            <!-- Hero image using srcset and media queries for responsive design -->
-            <source srcset="images/hero3" type="image/webp" media="(min-width: 1024px)">
-            <source srcset="images/hero2" type="image/webp" media="(min-width: 768px)">
-            <img src="images/hero1.webp" alt="A scenic view of Madagascar with wildlife" class="hero-image">
-        </picture>
+        <h1>GHANA</h1>
     </header>
-
-    <!-- Main Content Section -->
-    <main>
-        <section class="hero">
-            <div class="hero-image">
-                <img src="images/hero2.webp" alt="Cocoa from Ghana" class="hero-image">
-            </div>
-
-            <!-- Data Section -->
-            <section class="data-section">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area:</strong> 122,499 sq km</li>
-                    <li><strong>Population:</strong> 200,000 (Cape Coast City)</li>
-                    <li><strong>Capital:</strong> Cape Coast</li>
-                    <li><strong>Languages:</strong> English, Akan</li>
-                    <li><strong>Currency:</strong> Ghanaian Cedi (GHS)</li>
-                    <li><strong>Time Zone:</strong> UTC+0</li>
-                    <li><strong>Calling Code:</strong> +233</li>
-                    <li><strong>Internet TLD:</strong> .gh</li>
-                </ul>
-            </section>
-
-            <!-- Weather Section -->
-            <section id="weather">
-                <h2>Weather ⛅</h2>
-                <p><strong>Temperature:</strong> <span id="temperature">Loading...</span>°F</p>
-                <p><strong>Condition:</strong> <span id="condition">Loading...</span></p>
-                <p><strong>Wind Speed:</strong> <span id="windSpeed">Loading...</span> mph</p>
-                <p><strong>Wind Chill:</strong> <span id="windchill">Loading...</span>°F</p>
-            </section>
-        </section>
+    <main class="container">
+        <div class="hero-section">
+            <div class="hero">
+                <picture>
+                  <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                  <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                  <img src="images/hero-small.webp" alt="Temple name and location" width="500" height="250">
+                </picture>
+              </div>
+        </div>
+        <div class="data">
+            <h2 class="box-title">Data</h2>
+            <table>
+                <tr>
+                    <td class="label"><b>Area:</b></td>
+                    <td>122,499 km²</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Population:</b></td>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Capital:</b></td>
+                    <td>Cape Coast</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Languages:</b></td>
+                    <td>English, Fanti</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Currency:</b></td>
+                    <td>Ghanaian cedi (GHS)</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Time Zone:</b></td>
+                    <td>GMT</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Calling Code:</b></td>
+                    <td>+233</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Internet TLD:</b></td>
+                    <td>.gh</td>
+                </tr>
+            </table>
+        </div>
+        <div class="weather">
+            <h2 class="box-title">Weather <span class="weather-icon">&#9925;</span></h2>
+            <img src="images/weather-icon.svg" alt="light weather">
+            <table>
+                <tr>
+                    <td class="label"><b>Temperature:</b></td>
+                    <td>31 °C</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Conditions:</b></td>
+                    <td>Cloudy</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Wind:</b></td>
+                    <td>SW 7 km/h</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Wind Chill:</b></td>
+                    <td>10 °C</td>
+                </tr>
+            </table>
+        </div>
     </main>
-
-    <!-- Footer Section with Dynamic Year and Last Modified Date -->
     <footer>
-        <p>&copy; <span id="currentYear"></span> 🌸 Rubia Magdalena Francesco 🌸 Madagascar</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>&copy; <span id="curentyear">2025</span> Daniel Adongo • Ghana</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
-
 </html>
