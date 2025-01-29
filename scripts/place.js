@@ -1,29 +1,45 @@
-// Function to calculate wind chill factor
-function calculateWindChill(temperature, windSpeed) {
-    // Wind chill formula in Fahrenheit
-    return (35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16)).toFixed(2);
-}
 
-// Static values for weather data (can later be replaced by dynamic data)
-const temperature = 32; // in °F
-const windSpeed = 10; // in mph
-const condition = "Partly Cloudy"; // Example weather condition
+document.addEventListener("DOMContentLoaded", function () {
+    // Static values for temperature and wind speed
+    const temperature = 31; // in °C
+    const windSpeed = 7; // in km/h
 
-// Define conditions for viable wind chill calculations
-const isViableWindChill = (temperature <= 50 && windSpeed > 3); // Conditions for Imperial units (°F and mph)
+    // Function to calculate wind chill factor
+    function calculateWindChill(temp, wind) {
+        return 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16);
+    }
 
-// Calculate wind chill or display "N/A"
-let windChillResult = 'N/A';
-if (isViableWindChill) {
-    windChillResult = calculateWindChill(temperature, windSpeed);
-}
+    // Function to determine if wind chill calculation is applicable
+    function isWindChillApplicable(temp, wind) {
+        return temp <= 10 && wind > 4.8;
+    }
 
-// Display the weather information
-document.getElementById('temperature').textContent = temperature;
-document.getElementById('condition').textContent = condition;
-document.getElementById('windSpeed').textContent = windSpeed;
-document.getElementById('windchill').textContent = windChillResult;
+    // Display wind chill factor
+    const windChillElement = document.createElement("tr");
+    const windChillLabel = document.createElement("td");
+    windChillLabel.className = "label";
+    windChillLabel.innerHTML = "<b>Wind Chill:</b>";
 
-// Dynamically update the footer with current year and last modified date
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+    const windChillValue = document.createElement("td");
+    if (isWindChillApplicable(temperature, windSpeed)) {
+        const windChill = calculateWindChill(temperature, windSpeed).toFixed(2);
+        windChillValue.textContent = `${windChill} °C`;
+    } else {
+        windChillValue.textContent = "N/A";
+    }
+
+    windChillElement.appendChild(windChillLabel);
+    windChillElement.appendChild(windChillValue);
+
+    document.querySelector(".weather table").appendChild(windChillElement);
+});
+
+
+
+// Footer information
+const currentYear = new Date().getFullYear();
+const lastModified = document.lastModified;
+const copyrightYearElement = document.getElementById('currentyear');
+const lastModifiedElement = document.getElementById('lastModified');
+copyrightYearElement.textContent = currentYear;
+lastModifiedElement.textContent = `Last update: ${lastModified}`;
