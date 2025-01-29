@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Adongo">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="description" content="Explore Ghana: its culture, geography, and weather">
     <title>WDD 131 - Dynamic Web Fundamentals - Daniel Adongo</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
@@ -23,12 +24,13 @@
         <div class="hero-section">
             <div class="hero">
                 <picture>
-                  <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-                  <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
-                  <img src="images/hero-small.webp" alt="Temple name and location" width="500" height="250">
+                    <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                    <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                    <img src="images/hero-small.webp" alt="Ghana landscape or temple" width="500" height="250">
                 </picture>
-              </div>
+            </div>
         </div>
+
         <div class="data">
             <h2 class="box-title">Data</h2>
             <table>
@@ -38,15 +40,15 @@
                 </tr>
                 <tr>
                     <td class="label"><b>Population:</b></td>
-                    <td>200,000</td>
+                    <td>32 million</td> <!-- Corrected population -->
                 </tr>
                 <tr>
                     <td class="label"><b>Capital:</b></td>
-                    <td>Cape Coast</td>
+                    <td>Accra</td> <!-- Corrected capital -->
                 </tr>
                 <tr>
                     <td class="label"><b>Languages:</b></td>
-                    <td>English, Fanti</td>
+                    <td>English, Akan, Ewe</td> <!-- Added other common languages -->
                 </tr>
                 <tr>
                     <td class="label"><b>Currency:</b></td>
@@ -66,9 +68,10 @@
                 </tr>
             </table>
         </div>
+
         <div class="weather">
-            <h2 class="box-title">Weather <span class="weather-icon">&#9925;</span></h2>
-            <img src="images/weather-icon.svg" alt="light weather">
+            <h2 class="box-title">Weather <span class="weather-icon" aria-label="Weather icon">&#9925;</span></h2>
+            <img src="images/weather-icon.svg" alt="Current weather icon">
             <table>
                 <tr>
                     <td class="label"><b>Temperature:</b></td>
@@ -84,14 +87,16 @@
                 </tr>
                 <tr>
                     <td class="label"><b>Wind Chill:</b></td>
-                    <td>10 °C</td>
+                    <td>—</td> <!-- Removed incorrect wind chill -->
                 </tr>
             </table>
         </div>
     </main>
+
     <footer>
-        <p>&copy; <span id="curentyear">2025</span> Daniel Adongo • Ghana</p>
+        <p>&copy; <span id="currentyear">2025</span> Daniel Adongo • Ghana</p>
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>

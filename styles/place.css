@@ -1,83 +1,73 @@
-
 :root {
+    /* Primary Palette - Madagascar Flag Inspired */
+    --seasalt: #f8f9fa; /* White */
+    --platinum: #dee2e6; /* Light Gray */
+    --slate-gray: #6c757d; /* Dark Gray */
+    --outer-space: #495057; /* Darker Gray */
+    --onyx: #343a40; /* Near Black */
+    --eerie-black: #212529; /* Deep Black */
 
-    /* change the values below to your colors from your palette */
-    /* CSS HEX */
-    /* CSS HEX */
-    --seasalt: #f8f9faff;
-    --antiflash-white: #e9ecefff;
-    --platinum: #dee2e6ff;
-    --french-gray: #ced4daff;
-    --french-gray-2: #adb5bdff;
-    --slate-gray: #6c757dff;
-    --outer-space: #495057ff;
-    --onyx: #343a40ff;
-    --eerie-black: #212529ff;
+    /* Accent Colors (Red, Green, Earthy Tones) */
+    --fire-brick: #AE1820; /* Dark Red */
+    --rust: #AE3E22;
+    --fire-engine-red: #C3201F;
+    --chamoisee: #A16F4E; /* Brownish */
+    --chocolate-cosmos: #67171F; /* Deep Red */
+    
+    /* Secondary Palette (Blues) */
+    --alice-blue: #DCE9F7;
+    --powder-blue: #B6C9DF;
+    --dim-gray: #5C6069;
+    --gunmetal: #1F2E3B;
 
-    /* Palette Color image*/
-
-    /* CSS HEX */
-    --fire-brick: #AE1820ff;
-    --rust: #AE3E22ff;
-    --fire-engine-red: #C3201Fff;
-    --chamoisee: #A16F4Eff;
-    --chocolate-cosmos: #67171Fff;
-
-    /* CSS HEX */
-    --alice-blue: #DCE9F7ff;
-    --powder-blue: #B6C9DFff;
-    --dim-gray: #5C6069ff;
-    --gunmetal: #1F2E3Bff;
-    --french-gray: #B7B0BEff;
-
-
-
-    /* change the values below to your chosen font(s) */
+    /* Font Styling */
     --poppins-regular: "Poppins", sans-serif;
     --poppins-regular-weight: 400;
     --poppins-thin: "Poppins", sans-serif;
     --poppins-thin-weight: 100;
 
-    /* these colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: var(--primary-color-Rich-black);
-    /* headlines on a white background */
-    --headline-color-on-color: var(--accent3-color-Platinum);
-    /* headlines on a colored background */
-    --paragraph-color-on-white: var(--primary-color-Rich-black);
-    /* paragraph text on a white background */
-    --paragraph-color-on-color: var(--accent3-color);
-    /* paragraph text on a colored background */
-    --paragraph-background-color: var(--secondary-color-Oxford-Blue);
-    --nav-link-color: var(--accent3-color-Platinum);
-    --nav-background-color: var(--secondary-color-Oxford-Blue);
-    --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
-    --nav-hover-background-color: var(--primary-color-Rich-black);
+    /* UI Color Assignments */
+    --headline-color-on-white: var(--eerie-black);
+    --headline-color-on-color: var(--platinum);
+    --paragraph-color-on-white: var(--outer-space);
+    --paragraph-color-on-color: var(--platinum);
+    --paragraph-background-color: var(--gunmetal);
+    
+    --nav-link-color: var(--platinum);
+    --nav-background-color: var(--gunmetal);
+    --nav-hover-link-color: var(--fire-brick);
+    --nav-hover-background-color: var(--outer-space);
 }
 
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: var(--poppins-regular);
     box-sizing: border-box;
 }
 
+/* General Styling */
+body {
+    font-family: var(--poppins-regular);
+    background-color: var(--seasalt);
+    color: var(--outer-space);
+}
+
+/* Typography */
 h1 {
     font-size: 2rem;
 }
 
 h2 {
     font-size: 1.5rem;
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
-h2,
-h1 {
-    margin: 0%;
+h1, h2 {
+    margin: 0;
 }
 
+/* Tables */
 table {
     margin: 0 auto;
     text-align: left;
@@ -89,30 +79,33 @@ table {
 }
 
 td {
-    padding: 5px 5px;
+    padding: 5px;
 }
 
 td.label {
     text-align: right;
 }
 
+/* Layout */
 .container {
     text-align: center;
     display: grid;
-    grid-template-rows: 2fr auto auto;
+    grid-template-rows: auto auto auto;
     gap: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-
+/* Header */
 header {
     padding: 20px;
     text-align: center;
+    background-color: var(--onyx);
+    color: var(--platinum);
 }
 
+/* Hero Section */
 .hero-section {
-    grid-row: 1;
     background-color: var(--gunmetal);
     padding-top: 20px;
 }
@@ -120,10 +113,10 @@ header {
 .hero img {
     width: 100%;
     height: auto;
-    mask-image: linear-gradient(#67171Fff 95%,
-    transparent);
+    mask-image: linear-gradient(to bottom, var(--chocolate-cosmos) 95%, transparent);
 }
 
+/* Data & Weather Sections */
 .data,
 .weather {
     padding-top: 25px;
@@ -131,11 +124,6 @@ header {
 
 .data {
     grid-row: 2;
-
-}
-
-.weather-icon {
-    display: none;
 }
 
 .weather {
@@ -143,20 +131,21 @@ header {
     margin-bottom: 50px;
 }
 
+/* Weather Icon */
+.weather-icon {
+    display: none;
+}
 
 .weather img {
-    width: 15%;
+    max-width: 100px;
     height: auto;
 }
 
-header,
-footer {
-    background-color: var(--onyx);
-    color: var(--platinum);
-}
-
+/* Footer */
 footer {
     padding: 25px 0;
     text-align: center;
     font-size: 1rem;
+    background-color: var(--onyx);
+    color: var(--platinum);
 }
