@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 const temples = [
     {
         templeName: "Aba Nigeria",
