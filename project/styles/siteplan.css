@@ -27,7 +27,10 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1,
+h1{
+    color: whitesmoke;
+}
+
 h2,
 h3 {
   color: #0044cc;
@@ -35,7 +38,7 @@ h3 {
 }
 
 h2 {
-  border-bottom: 2px solid #00cc44;
+  border-bottom: 2px solid black;
   padding-bottom: 0.5em;
 }
 
