@@ -1,18 +1,17 @@
-
 :root {
     /* Palette colors */
-    --primary-color: #4a4e69;
-    --secondary-color: #9a8c98;
-    --background-color: #f2e9e4;
-    --text-color: #22223b;
-    --highlight-color: #c9ada7;
-    --hover-color: orange;
+    --primary-color: #374151; /* Dark Gray - Improved contrast */
+    --secondary-color: #6B7280; /* Medium Gray */
+    --background-color: #F3F4F6; /* Light Gray */
+    --text-color: #111827; /* Almost Black - High contrast */
+    --highlight-color: #EF4444; /* Red for important actions */
+    --hover-color: #F59E0B; /* Amber - Better visibility */
 
-    --primary-color-rich-black: #0D1B2A;
-    --secondary-color-oxford-blue: #1B263B;
-    --accent1-color-yinmn-blue: #415A77;
-    --accent2-color-silverlake-blue: #778DA9;
-    --accent3-color-platinum: #E0E1DD;
+    --primary-color-rich-black: #1E293B; /* Darker for contrast */
+    --secondary-color-oxford-blue: #334155;
+    --accent1-color-yinmn-blue: #3B82F6; /* Bright Blue */
+    --accent2-color-silverlake-blue: #60A5FA; /* Light Blue */
+    --accent3-color-platinum: #E5E7EB; /* Soft White */
 
     /* Font settings */
     --font-family: 'Poppins', sans-serif;
@@ -22,13 +21,13 @@
     /* Text colors */
     --headline-color-on-white: var(--primary-color-rich-black);
     --headline-color-on-color: var(--accent3-color-platinum);
-    --paragraph-color-on-white: var(--primary-color-rich-black);
+    --paragraph-color-on-white: var(--text-color);
     --paragraph-color-on-color: var(--accent3-color-platinum);
 
     /* Background colors */
     --paragraph-background-color: var(--secondary-color-oxford-blue);
     --nav-link-color: var(--accent3-color-platinum);
-    --nav-background-color: var(--secondary-color-oxford-blue);
+    --nav-background-color: var(--primary-color-rich-black);
     --nav-hover-link-color: var(--accent2-color-silverlake-blue);
     --nav-hover-background-color: var(--primary-color-rich-black);
 }
@@ -43,7 +42,7 @@
 body {
     font-family: var(--font-family);
     font-weight: var(--font-weight-regular);
-    background-color: var(--accent3-color-platinum);
+    background-color: var(--background-color);
     color: var(--text-color);
     padding: 20px;
 }
@@ -51,16 +50,18 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
-    background-color: var(--headline-color-on-white);
-    color: var(--background-color);
+    background-color: var(--primary-color-rich-black);
+    color: var(--accent3-color-platinum);
     font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 form {
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: auto;
 }
@@ -73,7 +74,7 @@ label {
     display: inline;
     margin-bottom: 8px;
     font-weight: bold;
-    color: var(--primary-color-rich-black);
+    color: var(--primary-color);
 }
 
 select,
@@ -83,11 +84,14 @@ input[type="text"],
 input[type="radio"],
 input[type="checkbox"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 4px;
     margin-bottom: 8px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: var(--accent3-color-platinum);
+    color: var(--text-color);
 }
 
 fieldset {
@@ -98,54 +102,58 @@ fieldset {
 
 legend {
     font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 8px;
     color: var(--primary-color-rich-black);
+    margin-bottom: 8px;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;
     margin-right: 8px;
-    
 }
 
 .features {
     font-size: 14px;
 }
 
+/* Submit Button */
 input[type="submit"] {
-    background-color: var(--primary-color-rich-black);
+    background-color: var(--primary-color);
     color: var(--accent3-color-platinum);
     border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
+    border-radius: 6px;
+    padding: 12px 20px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 16px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: var(--highlight-color);
 }
 
+/* Textarea */
 textarea {
-    height: 100px;
+    height: 120px;
+    resize: vertical;
 }
 
 /* Rating styles */
 .rating-box {
     max-width: 100%;
     margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #d9d9d9;
+    padding: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
 }
 
 .rating-box p {
     text-align: left;
     font-size: 20px;
     margin-left: 15px;
+    color: var(--primary-color-rich-black);
 }
 
 .rating-box input[type="radio"] {
@@ -155,8 +163,10 @@ textarea {
 .rating-box label {
     color: var(--accent2-color-silverlake-blue);
     font-size: 2rem;
-    border: 1px solid var(--primary-color-rich-black);
-    border-radius: 5px; 
+    border: 2px solid var(--primary-color-rich-black);
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
 }    
 
 .rating-box .clasificacion {
@@ -170,7 +180,7 @@ textarea {
 }
 
 .rating-box input[type="radio"]:checked~label {
-    color: var(--hover-color);
+    color: var(--primary-color-rich-black);
 }
 
 /* Footer */
@@ -179,6 +189,5 @@ footer {
     color: var(--headline-color-on-color);
     text-align: center;
     padding: 1rem;
+    border-radius: 5px;
 }
-
-  
