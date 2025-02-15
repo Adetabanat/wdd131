@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="School Management System for efficient student and staff management.">
+    <meta name="author" content="Daniel Adetaba Adongo">
+    <meta property="og:title" content="Home | School Management System">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/adetabanat/wdd231/main/chamber/images/natLogo.png">
+    <meta property="og:url" content="https://adetabanat.github.io/wdd231/chamber/index.html">
+    <title>Home | School Management System</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/auth.js" defer></script>
+    <script src="scripts/protect.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Nat SMS logo">
+            </div>
+          
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+        <h1 class="wayfinding"> Features </h1>
+            
+        <h2 id="userWelcome"></h2>
+
+        <h3>Admin Controls</h3>
+        <button onclick="manageUsers()">Manage Users</button>
+        <button onclick="viewReports()">View Reports</button>
+        <button onclick="configureSettings()">Configure Settings</button>
+        <button onclick="logout()">Logout</button>
+        
+    </main>
+
+   
+    <footer class="footer">
+        <div class="footer-address">
+    
+          <p><a href="mailto:danieladongonat@gmail.com">danieladongonat@gmail.com</a></p>
+        </div>
+        <div class="social-media">
+          <a href="https://web.facebook.com/daniel.nat1" target="_blank">Facebook</a>
+          <a href="https://www.linkedin.com/in/daniel-adetaba-adongo-9901292a0" target="_blank">LinkedIn</a>
+          <a href="https://github.com/Adetabanat/wdd231" target="_blank">GitHub</a>
+        </div>
+        <div class="footer-info">
+          <p>WDD 131  Project</p>
+          <p>&copy; <span id="currentyear"></span> All rights reserved</p>
+          <p id="lastModified"></p>
+        </div>
+     </footer>
+    
+    
+    
+</body>
+</html>
